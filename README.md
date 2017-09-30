@@ -1,4 +1,4 @@
-# Teste LTM
+# Teste Talent Four
 
 O objetivo deste respositório é armazenar o projeto de teste para desenvolvedor da LTM.
 
