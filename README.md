@@ -8,10 +8,9 @@ O projeto está divido em BackEnd e FrontEnd, vamos iniciar o setup pelo BackEnd
 
 ## BackEnd
 
-É pre-requisito para executar este projeto, a criação prévia de um banco de dados SQL Server (pode ser na versão Express).
+É pré-requisito para executar este projeto, a criação prévia de um banco de dados SQL Server (pode ser na versão Sql Express).
 
-Após baixar o código fonte do projeto LTM, abra a solution: LTM.sln no Visual Studio, navegue até a pasta "0.Migration", 
-abra o projeto "LTM.Migrations.Runner", edite o arquivo: App.Config, para corrigir a string de conexão com o banco de dados.
+Após baixar o repositório do projeto LTM, no Visual Studio, abra a solution: LTM.sln que está no diretorio "LTM/backend/", navegue até a pasta "0.Migration", abra o projeto "LTM.Migrations.Runner", edite o arquivo: App.Config, informando na string de conexão o banco de dados criado previamente.
 
 Substituir:
 [SERVIDOR_SQL] por nome/ip do servidor, exemplo: (local)\SqlExpress.
@@ -57,3 +56,40 @@ Configure o projeto LTM.WebApi como o StartUp Project da Solution e execute o co
 Anote a Url da aplicação pois vamos precisar desta informação para executar a aplicação cliente.
 
 Obs.: A url da aplicação está configurada para ser iniciada na porta 58370, ou seja, por padrão a URL da WebApi deveria ser http://localhost:58370.
+
+
+## FrontEnd
+
+A aplicação FrontEnd é composta por uma SPA (Single Page Application) em Angular. 
+
+Está no diretório "LTM/frontend/ltm-app", abra a pasta "ltm-app" no Visual Studio Code ou outro IDE de sua preferência.
+
+Será necessário validar o endereço base da API no arquivo "app.module.ts", linha 37. 
+
+```json
+{
+  provide: 'baseApiUrl',
+  useValue: 'http://localhost:58370'
+}
+```
+
+Obs.: Caso a porta da url de endereço do projeto WebApi não tenha sido alterado, não será necessário alterar o endereço base da API.
+
+Abra o prompt de comando e execute o comando abaixo:
+
+```node
+npm install
+```
+
+Em seguida, execute o comando para iniciar o projeto: 
+
+```node
+ng serve
+```
+
+Utilize o seguinte endereço para acessar a aplicação: http://localhost:4200
+
+Qualquer dúvida ou problema, por favor entre em contato: tiago482@gmail.com.
+
+
+
