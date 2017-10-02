@@ -89,6 +89,8 @@ ng serve
 
 Utilize o seguinte endereço para acessar a aplicação: http://localhost:4200
 
+Para logar na aplicação, utilize como usuario e senha a string: tiago
+
 Qualquer dúvida ou problema, por favor entre em contato: tiago482@gmail.com.
 
 
