@@ -32,7 +32,7 @@ namespace LTM.WebApi.Controllers
             var user = _userProfileService.Login(loginInfo.Login, loginInfo.Password);
 
             if (user == null)
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return NotFound();
 
             var token = JwtManager.GenerateToken(user.Id, user.Name, 1);
 

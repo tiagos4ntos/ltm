@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>LTM - Aplicação Teste</h1>
+    <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4 text-right">
+            <strong>Usuario Logado: </strong> <span>{{currentUser?.Name}}!</span><br/>
+            <a [routerLink]="['/login']">Logout</a></div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-10">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                        <th scope="row">{{ product.Id }}</th>
+                        <td>{{product.Name}}</td>
+                        <td>{{product.Description}}</td>
+                        <td>{{product.Price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
